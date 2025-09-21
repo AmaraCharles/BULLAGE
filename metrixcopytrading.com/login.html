@@ -86,11 +86,9 @@
           $('.live-section').html("Login successful").removeClass('alert-danger').addClass('alert-success');
           localStorage.setItem("user", JSON.stringify(data))
           setTimeout(function () { 
-            if (email=="adminrole@gmail.com"){
-              $(location).prop('href', './dashboard/admin/admindashboard.html')
-            } else {
+          
               $(location).prop('href','./dashboard/dashboard.html')
-            }
+            
           }, 4000)
         },
         error: function () {
