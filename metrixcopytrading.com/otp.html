@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <title>Bullagetrade</title>
+  <link rel="icon" href="./favicon.png">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap + Icons -->
+  <link rel="stylesheet" href="./otp_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./otp_files/all.min.css">
+  <link rel="stylesheet" href="./otp_files/stylesheet.css">
+
+  <style>
+    body {
+      background-color: #0d1b2a; /* Deep Blue background */
+      color: #fff;
+    }
+    .card-box {
+      background: #ffffff; /* White form card */
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      color: #0d1b2a;
+    }
+    h4 {
+      color: #0d1b2a !important;
+    }
+    .btn-custom {
+      background: #C7AE6A;
+      color: #0d1b2a;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+    .btn-custom:hover {
+      background: #b89c58;
+      color: #fff;
+    }
+    .otp-field {
+      border: 2px solid #C7AE6A !important;
+      border-radius: 10px;
+      background: #fff;
+      color: #0d1b2a;
+    }
+    .otp-field:focus {
+      outline: none;
+      box-shadow: 0 0 5px #C7AE6A;
+      border-color: #C7AE6A;
+    }
+    a {
+      color: #C7AE6A;
+    }
+    a:hover {
+      color: #b89c58;
+    }
+    .live-section.alert-primary {
+      background-color: #C7AE6A !important;
+      color: #0d1b2a !important;
+      border: none;
+    }
+    .live-section.alert-danger {
+      background-color: #721c24 !important;
+      color: #fff !important;
+      border: none;
+    }
+    footer {
+      background: #1b263b;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div id="main-wrapper" class="oxyy-login-register min-vh-100 d-flex flex-column" style="background-color: #1b263b;">
+  <div class="container my-auto">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 text-center py-5 card-box">
+        
+        <h4 class="mb-3 mt-3 fw-bold">Email Verification</h4>
+        <div class="live-section mb-2 small"></div>
+
+        <p class="text-muted mb-4">
+          Enter the 6-digit verification code we sent to <br>
+          <span class="fw-semibold" id="emfield">your-email@example.com</span>
+        </p>
+
+        <form id="otp-screen" method="post">
+          <div class="d-flex justify-content-between gap-2 mb-4">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+            <input type="text" class="form-control text-center fs-4 py-2 otp-field" maxlength="1" required autocomplete="off">
+          </div>
+
+          <div class="d-grid mb-3">
+            <button type="submit" id="verifyBtn" class="btn btn-lg shadow-sm btn-custom" onclick="verify()">
+              Verify
+            </button>
+          </div>
+        </form>
+
+        <p class="mb-0 text-muted">
+          Didn't receive the code? <a id="again" href="#" class="fw-semibold">Resend it</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid py-2 text-center">
+  <p class="mb-0">Copyright © 
+    <a href="./otp_files/otp-6.html" style="color:#C7AE6A;">Bullagetrade</a>. All Rights Reserved.
+  </p>
+</footer>
+
+<!-- Scripts -->
+<script>
+function wait(){ location.href="./verify.html" }
+
+function verify(e){
+  event.preventDefault()
+  $('#verifyBtn').html("Loading...")
+
+  const otpFields = document.querySelectorAll('.otp-field');
+  let otpValues = [];
+  otpFields.forEach(input => { otpValues.push(input.value); });
+  const otp = otpValues.join('');
+
+  const lsOtp=localStorage.getItem("otp")
+  const lsOtpTime=localStorage.getItem("otpExpiration")
+  const currentTime=Date.now();
+
+  if (currentTime > lsOtpTime) {
+    alert("The OTP has expired");
+    $('#verifyBtn').html("Verify");
+    return;
+  }
+  if(otp!=lsOtp){ 
+    alert("The OTP is invalid");
+    $('#verifyBtn').html("Verify");
+    return;
+  }
+
+  setTimeout(wait,3000);
+}
+
+$(document).ready(function () {
+  var em= localStorage.getItem("email")
+  $('#emfield').html(em);
+});
+
+async function resendEmail(values) {
+  await $.ajax({
+    type: "POST",
+    url: "https://bullage-server.onrender.com/auth/register/resend",
+    dataType: "json",
+    data: { ...values },
+    timeout: 30000,
+    success: function (data) {
+      $('.live-section').html("A new OTP has been sent to your email").removeClass().addClass('live-section alert alert-primary');
+      if (data.otp && data.otpExpiration) {
+        localStorage.setItem("otp",data.otp)
+        localStorage.setItem("otpExpiration",data.otpExpiration)
+      }
+      setTimeout(function () {
+        $(location).prop('href', './otp.html')
+      }, 3000)
+    },
+    error: function () {
+      $('.live-section').html("Something went wrong").removeClass().addClass('live-section alert alert-danger');
+    }
+  });
+}
+
+$('#again').click(function (e) {
+  e.preventDefault(); 
+  var email= localStorage.getItem("email")
+  resendEmail({ email });
+});
+</script>
+
+</body>
+</html>

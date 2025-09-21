@@ -1,0 +1,874 @@
+#trading-platforms-section {
+  background: #F1F3F9;
+}
+
+#trading-platforms-section .trading-platforms-wrapper {
+  position: relative;
+  max-width: 102rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#trading-platforms-section .trading-platforms-wrapper {
+  padding: 3rem 0 3.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+   #trading-platforms-section .trading-platforms-wrapper {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-top: 7.5rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+  font-family: "Oswald", "Neo Sans Arabic", "Microsoft YaHei New", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.3333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a0762f), color-stop(51%, #dec481), to(#a0762f));
+  background-image: linear-gradient(90deg, #a0762f 0%, #dec481 51%, #a0762f 100%);
+  -webkit-text-fill-color: transparent;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+  margin: 0;
+  -webkit-background-clip: text;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+  background-image: -webkit-gradient(linear, left top, right top, from(#AD8640), to(#CAAB67));
+  background-image: linear-gradient(90deg, #AD8640 0%, #CAAB67 100%);
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+  background-image: -webkit-gradient(linear, right top, left top, from(#AD8640), to(#CAAB67));
+  background-image: linear-gradient(-90deg, #AD8640 0%, #CAAB67 100%);
+}
+
+@media (min-width: 768px) {
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+      font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+      font-size: 2.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+      font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+   #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+      padding: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-heading {
+      font-size: 3.25rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .trading-platforms-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .trading-platforms-swiper {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+@media (max-width: 768px) {
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-swiper .swiper-slide.swiper-slide-active {
+      opacity: 1 !important;
+  }
+
+  #trading-platforms-section .trading-platforms-wrapper .trading-platforms-swiper .swiper-slide:not(.swiper-slide-active) {
+      opacity: 0 !important;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper {
+  width: 100%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper {
+  margin-top: 0.7rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .button-slider {
+  color: #03105F;
+  font-size: 1rem;
+  font-weight: 700;
+  height: auto;
+  white-space: nowrap;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .button-slider {
+  text-align: center;
+  border-radius: 2.25rem;
+  background: #F1F3F9;
+  padding: 0.33333em 1.3em;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .buttons-swiper .button-slider {
+      font-size: 1.125rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .swiper-slide {
+  opacity: 0.6;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .swiper-slide .button-slider {
+  border: none;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .swiper-slide-active {
+  opacity: 1;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .buttons-swiper .swiper-slide-active .button-slider {
+  border: 0.0625rem solid #BB914A;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar {
+  position: relative;
+  bottom: 0;
+  height: 2.25rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar {
+  margin-top: 1rem;
+  border-radius: 2.25rem;
+  background: transparent;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar {
+  left: 0;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar {
+  right: 0;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar .swiper-scrollbar-drag {
+  color: #03105F;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 13.75rem;
+  white-space: nowrap;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .swiper-scrollbar .swiper-scrollbar-drag {
+  text-align: center;
+  border-radius: 2.25rem;
+  background: #F1F3F9;
+  border: 0.0625rem solid #BB914A;
+  padding: 0.33333em 1.3em;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper {
+  position: relative;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper {
+  padding: 0 2rem;
+  margin-top: 1.5rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper img {
+  height: auto;
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+  position: absolute;
+  top: 22%;
+  width: 32%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+  -webkit-animation: leftBottomFloat 11s ease-in-out infinite;
+  animation: leftBottomFloat 11s ease-in-out infinite;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+  left: 1.5%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+  right: 1.5%;
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+      width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1 {
+      width: 100%;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1.ctrader {
+  top: 12%;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1.ctrader {
+  left: 24.5%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1.ctrader {
+  right: 24.5%;
+}
+
+@media (min-width: 1200px) {
+  [dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1.ctrader {
+      left: 9.5%;
+  }
+
+  [dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-1.ctrader {
+      right: 9.5%;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+  position: absolute;
+  top: 10%;
+  width: 32%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+  -webkit-animation: rightTopFloat 6s ease-in-out infinite;
+  animation: rightTopFloat 6s ease-in-out infinite;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+  left: 61%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+  right: 61%;
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+      width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+      width: 100%;
+  }
+}
+
+@media (min-width: 2560px) {
+  [dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+      left: 50%;
+  }
+
+  [dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2 {
+      right: 50%;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2.ctrader {
+  top: 33%;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2.ctrader {
+  left: 24.5%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2.ctrader {
+  right: 24.5%;
+}
+
+@media (min-width: 1200px) {
+  [dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2.ctrader {
+      left: 13%;
+  }
+
+  [dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-2.ctrader {
+      right: 13%;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+  position: absolute;
+  top: 30%;
+  width: 32%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+  -webkit-animation: rightTopFloat 6s ease-in-out infinite;
+  animation: rightTopFloat 6s ease-in-out infinite;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+  left: 4%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+  right: 4%;
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+      width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3 {
+      width: 100%;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3.ctrader {
+  top: 16%;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3.ctrader {
+  left: 49%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3.ctrader {
+  right: 49%;
+}
+
+@media (min-width: 2560px) {
+  [dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3.ctrader {
+      left: 39%;
+  }
+
+  [dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .img-wrapper .image-3.ctrader {
+      right: 39%;
+  }
+}
+
+@media (min-width: 1600px) {
+  [dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .mt4-mt5-slide {
+      padding-right: 10rem;
+  }
+
+  [dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .mt4-mt5-slide {
+      padding-left: 10rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-title {
+  width: 100%;
+  color: #03105F;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-title {
+  text-align: left;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-title {
+  text-align: right;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-title {
+      font-size: 1.5rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 992px) {
+   #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps {
+      margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+   #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .steps-rows {
+      margin-top: 2.25rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+  font-family: "Oswald", "Neo Sans Arabic", "Microsoft YaHei New", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.3333;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.75rem;
+  font-size: 2.625rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+  margin: 0;
+  -webkit-background-clip: text;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a0762f), color-stop(51%, #dec481), to(#a0762f));
+  background-image: linear-gradient(90deg, #a0762f 0%, #dec481 51%, #a0762f 100%);
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+  background-image: -webkit-gradient(linear, right top, left top, from(#a0762f), color-stop(51%, #dec481), to(#a0762f));
+  background-image: linear-gradient(-90deg, #a0762f 0%, #dec481 51%, #a0762f 100%);
+}
+
+@media (min-width: 768px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+      font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+      font-size: 2.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .how-to-number {
+      font-size: 3.25rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-title {
+  color: #03105F;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-title {
+      font-size: 1.5rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description {
+  color: #03105F;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description {
+      font-size: 1.25rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description.mt45-slide {
+  margin-top: 1.25rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description-2 {
+  color: #03105F;
+  font-size: 0.9375rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description-2 {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .how-to-steps .step-description-2 {
+      font-size: 1.25rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section {
+  color: #03105F;
+  font-size: 0.875rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section {
+      font-size: 1rem;
+  }
+
+   #trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section {
+      margin-top: 2.625rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.9375rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons {
+  margin-top: 0.8125rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons.mt4-mt5-buttons {
+  cursor: none;
+}
+
+@media (min-width: 1600px) {
+  #trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons.mt4-mt5-buttons {
+      gap: 4.75rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons .download-button {
+  cursor: pointer;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons .download-button img {
+  width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  height: auto;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons .download-button:hover .img-hover {
+  display: block !important;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platform-slide .download-section .download-buttons .download-button:hover .img {
+  display: none;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn {
+  position: relative;
+  bottom: 0;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn {
+  margin-top: 1rem;
+  border-radius: 2.25rem;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .platforms-btn {
+  left: 0;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .platforms-btn {
+  right: 0;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet {
+  color: #03105F;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 13.75rem;
+  min-width: 15rem;
+  height: auto;
+  white-space: nowrap;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet {
+  text-align: center;
+  border-radius: 2.25rem;
+  background: #F1F3F9;
+  border: 0.0625rem solid #BB914A;
+  padding: 0.33333em 1.3em;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet:hover,
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet .swiper-pagination-bullet-active {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet:hover,
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet .swiper-pagination-bullet-active {
+  background: #010C3E;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet {
+      font-size: 1.5rem;
+      width: auto;
+      min-width: 15rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet-active {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .platforms-btn .swiper-pagination-bullet-active {
+  background: #010C3E;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons {
+  position: relative;
+  bottom: 0;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons {
+  margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  #trading-platforms-section .trading-platforms-wrapper .circular-buttons {
+      position: absolute;
+      bottom: 3rem;
+  }
+
+   #trading-platforms-section .trading-platforms-wrapper .circular-buttons {
+      margin-top: 0;
+  }
+}
+
+@media (min-width: 2500px) {
+  #trading-platforms-section .trading-platforms-wrapper .circular-buttons {
+      bottom: 0;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons .swiper-pagination-bullet {
+  height: 0.375rem;
+  width: 0.375rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons .swiper-pagination-bullet {
+  background: #000832;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons .swiper-pagination-bullet-active {
+  height: 0.375rem;
+  width: 1.6875rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .circular-buttons .swiper-pagination-bullet-active {
+  background: #000832;
+  border-radius: 0.375rem;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more {
+  margin-top: 1rem;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .learn-more {
+  padding-right: 2em;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more {
+  padding-left: 2em;
+}
+
+:root[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more {
+  padding-left: 1em;
+}
+
+@media (min-width: 1200px) {
+   #trading-platforms-section .trading-platforms-wrapper .learn-more {
+      margin-top: 3rem;
+  }
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more .learn-more-link {
+  text-decoration: none;
+  color: #C79942;
+  font-size: 1.25rem;
+  font-family: "Oswald", "Neo Sans Arabic", "Microsoft YaHei New", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more .learn-more-link {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more .platforms-arrow {
+  position: absolute;
+  height: 1.5em;
+  top: 50%;
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .learn-more .platforms-arrow {
+  -webkit-transition: right 0.3s ease, color 0.3s ease;
+  transition: right 0.3s ease, color 0.3s ease;
+  right: -12%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more .platforms-arrow {
+  -webkit-transition: left 0.3s ease, color 0.3s ease;
+  transition: left 0.3s ease, color 0.3s ease;
+  left: -12%;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+
+:root[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more .platforms-arrow {
+  -webkit-transform: translate(-50%, -50%) scale(-1, 1);
+  transform: translate(-50%, -50%) scale(-1, 1);
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more:hover .platforms-arrow,
+#trading-platforms-section .trading-platforms-wrapper .learn-more:focus-visible .platforms-arrow {
+  -webkit-filter: invert(11%) sepia(39%) saturate(4221%) hue-rotate(224deg) brightness(50%) contrast(120%);
+  filter: invert(11%) sepia(39%) saturate(4221%) hue-rotate(224deg) brightness(50%) contrast(120%);
+}
+
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .learn-more:hover .platforms-arrow,
+[dir=ltr] #trading-platforms-section .trading-platforms-wrapper .learn-more:focus-visible .platforms-arrow {
+  right: -20%;
+}
+
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more:hover .platforms-arrow,
+[dir=rtl] #trading-platforms-section .trading-platforms-wrapper .learn-more:focus-visible .platforms-arrow {
+  left: -20%;
+}
+
+#trading-platforms-section .trading-platforms-wrapper .learn-more:hover .learn-more-link,
+#trading-platforms-section .trading-platforms-wrapper .learn-more:focus-visible .learn-more-link {
+  color: #03105F;
+}
+
+@-webkit-keyframes leftBottomFloat {
+  0% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+
+  50% {
+      -webkit-transform: translate(-6%, 10%);
+      transform: translate(-6%, 10%);
+  }
+
+  100% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+}
+
+@keyframes leftBottomFloat {
+  0% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+
+  50% {
+      -webkit-transform: translate(-6%, 10%);
+      transform: translate(-6%, 10%);
+  }
+
+  100% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes rightTopFloat {
+  0% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+
+  50% {
+      -webkit-transform: translate(6%, -11%);
+      transform: translate(6%, -11%);
+  }
+
+  100% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+}
+
+@keyframes rightTopFloat {
+  0% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+
+  50% {
+      -webkit-transform: translate(6%, -11%);
+      transform: translate(6%, -11%);
+  }
+
+  100% {
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+  }
+}
