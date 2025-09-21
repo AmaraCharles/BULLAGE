@@ -153,6 +153,22 @@ function verify(e){
 $(document).ready(function () {
   var em= localStorage.getItem("email")
   $('#emfield').html(em);
+
+  // 🔥 Auto move between OTP fields
+  const otpFields = document.querySelectorAll('.otp-field');
+  otpFields.forEach((field, index) => {
+    field.addEventListener("input", (e) => {
+      if (e.target.value.length === 1 && index < otpFields.length - 1) {
+        otpFields[index + 1].focus();
+      }
+    });
+
+    field.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !field.value && index > 0) {
+        otpFields[index - 1].focus();
+      }
+    });
+  });
 });
 
 async function resendEmail(values) {
@@ -184,6 +200,7 @@ $('#again').click(function (e) {
   resendEmail({ email });
 });
 </script>
+
 
 </body>
 </html>
