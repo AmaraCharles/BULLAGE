@@ -1315,7 +1315,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                var parsedData = localStorage.getItem('user')
                                var userFromLS = JSON.parse((parsedData))
                    
-                               console.log(userFromLS);
+                               
                    
                                const response = await $.ajax({
                                    type: "GET",
@@ -1338,7 +1338,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                 let sum;
     
         const userInfo=await fetchUserInfo()
-           console.log(userInfo);
+           
            
         $("#username").html(userInfo.firstName + " " + userInfo.lastName);
                                $("#captionUsername").html(userInfo.firstName + " " + userInfo.lastName);
@@ -1674,7 +1674,7 @@ function went(){alert('withdrawal request successfully sent')}
         var parsedData = localStorage.getItem('user')
         var userFromLS = JSON.parse((parsedData))
         let currentUser;
-        console.log(userFromLS);
+        
   
         const response = await $.ajax({
           type: "GET",

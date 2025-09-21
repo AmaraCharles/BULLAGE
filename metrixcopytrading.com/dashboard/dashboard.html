@@ -444,7 +444,7 @@ display: block;
                         var parsedData = localStorage.getItem('user')
                         var userFromLS = JSON.parse((parsedData))
             
-                        console.log(userFromLS);
+                        
             
                         const response = await $.ajax({
                             type: "GET",
@@ -467,7 +467,7 @@ display: block;
                          let sum;
 
  const userInfo=await fetchUserInfo()
-    console.log(userInfo);
+    
     
  $("#username").html(userInfo.firstName + " " + userInfo.lastName);
                         $("#captionUsername").html(userInfo.firstName + " " + userInfo.lastName);
