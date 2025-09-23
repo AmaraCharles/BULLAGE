@@ -1435,11 +1435,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                             <div class="col-md-12 m-b-30">
                                 <!-- begin page title -->
                                 <div class="d-block d-sm-flex flex-nowrap align-items-center">
-                                    <div class="page-title mb-2 mb-sm-0">
+                                    <!-- <div class="page-title mb-2 mb-sm-0">
                                         <h1>Choose your Trading Plan</h1>
-                                    </div>
+                                    </div> -->
                                     <div class="ml-auto d-flex align-items-center">
-                                        <nav>
+                                        <!-- <nav>
                                             <ol class="breadcrumb p-0 m-b-0">
                                                 <li class="breadcrumb-item">
                                                     <a href="dashboard.html"><i class="fas fa-home"></i></a>
@@ -1449,7 +1449,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                                 </li>
                                                 <li class="breadcrumb-item active text-primary" aria-current="page">Copy Trading</li>
                                             </ol>
-                                        </nav>
+                                        </nav> -->
                                     </div>
                                 </div>
                                 <!-- end page title -->
@@ -1460,14 +1460,14 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         <div class="row">
                             <div class="col-12">
                                 <div class="card card-statistics clients-contant">
-                                    <div class="card-header">
+                                    <!-- <div class="card-header">
                                         <div class="d-xxs-flex justify-content-between align-items-center">
                                             <div class="card-heading">
                                                 <h4 class="card-title">Select your trading plan</h4>
                                             </div>
                                             
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="card-body py-0 table-responsive" id="tradersHouse">
                                         <div class="modal fade" id="verticalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1574,43 +1574,179 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                         
     </div>                          
 </div><div style="overflow-x: auto; white-space: nowrap;">
-    <table class="table clients-contant-table mb-0">
-        <thead>
-            <tr>
-                <th scope="col">Broker Image &nbsp;&nbsp;&nbsp;  Name</th> 
-                <th scope="col">No of Trades</th>
-                <th scope="col">Profit Rate</th>
-                <th scope="col">Status of Trade</th>
-                <th scope="col">Confidence Level</th>
-                <th scope="col">Return</th> 
-                <th scope="col">View</th>
-                <th scope="col">Select</th>
-            </tr>
-        </thead>
-        <tbody class="table-body">
-            <!-- your table rows go here -->
-       
-   
-  
-  
-
-
-              
-                  
+    
 
 
 
 
+  <style>
+   body {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+   /* dark backdrop makes rewards pop */
+  margin: 0;
+}
 
-                             
-                             
+.container {
+  max-width: 1200px;      /* keeps content from stretching too wide */
+  margin: 0 auto;         /* centers container */
+  padding: 20px;
+}
 
-                    </tbody>
-                </table>
+h2, h3, h4, h5, p {
+  text-align: center;     /* centers all headings/text */
+}
 
-                                   
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  justify-items: center;  /* centers cards in each grid cell */
+}
 
+    .reward-tier {
+      position: relative;
+      background: #1b263b;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .reward-tier:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(199, 174, 106, 0.4);
+    }
+    .reward-icon img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .padlock {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.95);
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+      padding: 18px;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .reward-tier.unlocked .padlock {
+      opacity: 0;
+    }
+    .reward-info {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .reward-tier:hover .reward-info {
+      opacity: 1;
+    }
+    .highlight {
+      background: #C7AE6A;
+      color: #0d1b2a;
+      font-weight: bold;
+      padding: 3px 7px;
+      border-radius: 8px;
+    }
+    /* Glow effect for current unlocked tier */
+    .current-rank {
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
 
+<div class="container py-5">
+  <h2 class="text-center mb-4">🏅 Rewards <br>& <br> Ranks</h2>
+
+  <div class="text-center mb-4">
+    <h4>Total Deposits: <span class="highlight" id="totalDeposits">$0</span></h4>
+    <h5>Current Rank: <span id="rankName">Loading...</span></h5>
+    <p id="rankReward">Entitled Reward: -</p>
+  </div>
+
+  <div class="rewards-grid" id="rewardPlans"></div>
+</div>
+
+<script src="https://kit.fontawesome.com/a2e0e6ad05.js" crossorigin="anonymous"></script>
+<script>
+  // Mock fetch user from localStorage
+  const user = JSON.parse(localStorage.getItem("user")) || {
+    transactions: [
+      { amount: 10000 },
+      { amount: 20000 },
+      { amount: 5000 }
+    ]
+  };
+
+  // Medal images for each rank
+  const medalImages = {
+    "Welcome": "https://cdn-icons-png.flaticon.com/512/2583/2583345.png",
+    "Silver": "https://cdn-icons-png.flaticon.com/512/2583/2583346.png",
+    "Silver Pro": "https://cdn-icons-png.flaticon.com/512/2583/2583346.png",
+    "Gold": "https://cdn-icons-png.flaticon.com/512/2583/2583314.png",
+    "Gold Pro": "https://cdn-icons-png.flaticon.com/512/2583/2583314.png",
+    "Platinum": "https://cdn-icons-png.flaticon.com/512/2583/2583316.png",
+    "Chambers Rank": "https://cdn-icons-png.flaticon.com/512/2583/2583347.png",
+    "Ambassadorship": "https://cdn-icons-png.flaticon.com/512/2583/2583348.png"
+  };
+
+  // Reward tiers
+  const rewardTiers = [
+    { name: "Welcome", min: 0, reward: "Welcome Bonus: $10" },
+    { name: "Silver", min: 5000, reward: "Exclusive Signals" },
+    { name: "Silver Pro", min: 25000, reward: "Cash Bonus: $500" },
+    { name: "Gold", min: 50000, reward: "VIP Trading Tools" },
+    { name: "Gold Pro", min: 100000, reward: "Cash Bonus: $2000" },
+    { name: "Platinum", min: 200000, reward: "Luxury Travel Package" },
+    { name: "Chambers Rank", min: 500000, reward: "High-End Watch + Elite Access" },
+    { name: "Ambassadorship", min: 1000000, reward: "Luxury Car Giveaway" }
+  ];
+
+  // Calculate total deposits
+  const totalDeposits = user.transactions.reduce((sum, t) => sum + (Number(t.amount) || 0), 0);
+
+  // Determine current tier
+  let currentTierIndex = 0;
+  rewardTiers.forEach((tier, index) => {
+    if (totalDeposits >= tier.min) currentTierIndex = index;
+  });
+  const currentTier = rewardTiers[currentTierIndex];
+
+  // Update header info
+  document.getElementById("totalDeposits").textContent = `$${totalDeposits.toLocaleString()}`;
+  document.getElementById("rankName").textContent = currentTier ? currentTier.name : "Unranked";
+  document.getElementById("rankReward").textContent = `Entitled Reward: ${currentTier ? currentTier.reward : "-"}`;
+
+  // Render rewards grid
+  const plansContainer = document.getElementById("rewardPlans");
+  rewardTiers.forEach((tier, index) => {
+    const unlocked = totalDeposits >= tier.min;
+    const isCurrent = index === currentTierIndex;
+    const div = document.createElement("div");
+    div.className = `reward-tier ${unlocked ? "unlocked" : ""} ${isCurrent ? "current-rank" : ""}`;
+    div.innerHTML = `
+      <div class="reward-icon">
+        <img src="${medalImages[tier.name]}" alt="${tier.name} Medal">
+      </div>
+      <div class="padlock"><i class="fas fa-lock"></i></div>
+      <h5>${tier.name}</h5>
+      <div class="reward-info">
+        <p><strong>Minimum:</strong> $${tier.min.toLocaleString()}</p>
+        <p><strong>Reward:</strong> ${tier.reward}</p>
+      </div>
+    `;
+    plansContainer.appendChild(div);
+  });
+</script>
 
 
                                     </div>
